@@ -1,5 +1,4 @@
 
-
 var app = new Vue({
     el: '#app',
     data: {
@@ -16,9 +15,10 @@ var app = new Vue({
     },
     methods: {
       add: function(){
-            this.members.push(this.member);
-            this.member = {};
-            this.step ++         
+          this.members.push(this.member);
+          this.member = {};
+          this.step ++ 
+                    
       },
       increaze: function(e) {
         this.amount * 2
@@ -29,12 +29,13 @@ var app = new Vue({
          this.fees.push(this.amount)
       },
       gottostep1: function(){
-          alert('You are goint to add a new member')
+          alert('You Are About To Add New Member')
           this.step = 1
       },
+    },
+
     
-      
-    }
+
   });
 
 
