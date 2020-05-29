@@ -28,6 +28,7 @@ var app = new Vue({
       },
       gottostep1: function(){
           alert('You Are About To Add New Member')
+          this.amount = 45
           this.step = 1
       },
     },
