@@ -10,23 +10,21 @@ var app = new Vue({
           lastname: '',
           email: ''
       },
-      amount: 45.00,
-      fees: []
+      amount: 45
     },
     methods: {
       add: function(){
           this.members.push(this.member);
           this.member = {};
-          this.step ++ 
-                    
+          this.step ++             
       },
+
       increaze: function(e) {
         this.amount * 2
       },
 
       feeincreament: function(){
          this.amount *= 2
-         this.fees.push(this.amount)
       },
       gottostep1: function(){
           alert('You Are About To Add New Member')
