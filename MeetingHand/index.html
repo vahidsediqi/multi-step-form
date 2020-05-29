@@ -41,12 +41,16 @@
                    </form>
                      <!-- step 2 amount -->
                      <div v-if="step == 2" class="fees-div">
-                        <span> ${{amount}}<button v-on:click="amount *= 2" class="btn"><i class="fas fa-plus-square"></i></button></span>
+                        <span> ${{amount}}<button v-on:click="feeincreament" class="btn"><i class="fas fa-plus-square"></i></button></span>
                     </div>
                   <!-- step 3 display the members -->
                 <div  v-if="step == 3" class="step3">
                     <div class="fees-div">
-                        <span> ${{amount}}</span>
+                        <span>
+                            <ul style="list-style: none;">
+                                <li  v-for="fee in fees">{{ fee }}</li>
+                            </ul>
+                        </span>
                     </div>
                     <table class="table">
                         <thead>

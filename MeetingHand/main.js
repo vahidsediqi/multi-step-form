@@ -11,7 +11,8 @@ var app = new Vue({
           lastname: '',
           email: ''
       },
-      amount: 45.00
+      amount: 45.00,
+      fees: []
     },
     methods: {
       add: function(){
@@ -23,6 +24,10 @@ var app = new Vue({
         this.amount * 2
       },
 
+      feeincreament: function(){
+         this.amount *= 2
+         this.fees.push(this.amount)
+      },
       gottostep1: function(){
           alert('You are goint to add a new member')
           this.step = 1

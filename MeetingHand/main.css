@@ -37,8 +37,7 @@
 
   .fees-div > span {
     position: absolute;
-    bottom: 15px;
-    right: 15px;
+    right: 35px;
   }
   .title-div{
     background-color: var(--color-bg);
