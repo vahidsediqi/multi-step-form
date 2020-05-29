@@ -48,14 +48,15 @@
                             <th scope="col">Last Name</th>
                             <th scope="col">Email</th>
                             <th scope="col">Amount</th>
+
                         </tr>
                         </thead>    
                         <tbody>
-                        <tr v-for="m in member"
+                        <tr v-for="p in members"
                             v-bind:key="p.id">
-                            <td>{{m.name}}</td>
-                            <td>{{m.lastname}}</td>
-                            <td>{{m.email}}</td>
+                            <td>{{p.name}}</td>
+                            <td>{{p.lastname}}</td>
+                            <td>{{p.email}}</td>
                             <!-- <td>{{amount}}</td> -->
                         
                         </tr>

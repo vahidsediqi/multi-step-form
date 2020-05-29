@@ -3,7 +3,6 @@ var app = new Vue({
     data: {
       step: 1,
       totalsteps: 3,
-      errors: [],
       members: [],
       member: { 
           name : '',
@@ -18,6 +17,7 @@ var app = new Vue({
             this.member = {};
             this.step ++         
       },
+
       gottostep1: function(){
           alert('You are goint to add a new member')
           this.step = 1
