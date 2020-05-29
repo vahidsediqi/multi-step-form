@@ -1,0 +1,36 @@
+:root{
+    --color-p1: #2980b9; 
+    --color-p2: #7f8c8d;
+    --color-bg: #3C55B9;
+    --color-text: #0E94F9;
+  }
+  
+  .container {
+    max-width: 600px !important;
+    margin: 70px auto;
+  }
+
+  .amount-div {
+      display: flex;
+      justify-content: space-between;
+      border: 1.5px solid var(--color-text);
+      padding: 10px;
+      border-radius: 5px;
+      color: var(--color-text);
+      font-weight: bold;
+  }
+  .title-div{
+    background-color: var(--color-bg);
+    color: white;
+    margin: 70px auto;
+    margin-bottom: 25px !important;
+  }
+
+  
+  
+  /* h1{
+    text-align:Center;
+    color: var(--color-p1);
+  } */
+  
+  

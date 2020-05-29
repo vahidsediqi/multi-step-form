@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation with VueJs</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./main.css">
+    <script src="https://kit.fontawesome.com/9cbf552748.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="title-div">
+            <h4 class="pl-3 pt-2">Vue Conf TR</h4>
+            <p class="pl-3 pt-3 pb-3">CoZon Ankara, Turkey <span>06.12.2020 - 06-16-2020</span></p>  
+        </div>
+        <h5 style="color: #0E94F9;"> <i class="fas fa-address-card"></i> Registration Types & Fees</h5>
+        
+       <div id="app"> 
+        <div class="amount-div">
+            <span>Regular</span><span>{{ amount }}</span>     
+        </div>    
+            <!-- step 1 the form field -->
+                    <form v-if="step == 1" class="mt-3">
+                        <div class="form-group">
+                            <label for="nome">First Name: </label>
+                            <input required class="form-control" type="text" id="nome" v-model="member.name" autocomplete="off" required/>
+                        </div>
+                        <div class="lastname input">
+                            <label for="lastname">Last Name: </label>
+                            <input required class="form-control" type="text" id="lastname" v-model="member.lastname" autocomplete="off" required>
+                        </div>
+                        <div class="email input">
+                            <label class="email" for="email">Email:</label>   
+                            <input required aria-describedby="emailHelp" class="form-control" type="email" id="email" v-model="member.email" autocomplete="off" required>  
+                        </div> 
+                      <!-- step 2 amount -->
+                  </form>
+
+                  <!-- step 3 display the members -->
+                <div  v-if="step == 3" class="step3">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">First Name:</th>
+                            <th scope="col">Last Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Amount</th>
+                        </tr>
+                        </thead>    
+                        <tbody>
+                        <tr v-for="m in member"
+                            v-bind:key="p.id">
+                            <td>{{m.name}}</td>
+                            <td>{{m.lastname}}</td>
+                            <td>{{m.email}}</td>
+                            <!-- <td>{{amount}}</td> -->
+                        
+                        </tr>
+                        </tbody>
+                    </table>
+                    <button v-on:click="gottostep1()" class="btn btn-primary mt-5 mr-auto">Add New Memeber</button>
+                </div>
+            
+                <button v-if="step !=totalsteps" v-on:click="add()" class="btn btn-primary mt-5 mr-auto">Next Step ></button>
+        </div> 
+      </div>
+    <script src="./main.js"></script>
+</body>
+</html>
