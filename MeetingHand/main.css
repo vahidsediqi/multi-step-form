@@ -19,6 +19,27 @@
       color: var(--color-text);
       font-weight: bold;
   }
+
+  .fees-div {
+    display: flex;
+    justify-content: space-between;
+    border: 1.5px solid gray;
+    height: 75px;
+    border-radius: 5px;
+    color: var(--color-text);
+    font-weight: bold;
+    position: relative;
+  }
+
+  i {
+    color: var(--color-text)
+  }
+
+  .fees-div > span {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+  }
   .title-div{
     background-color: var(--color-bg);
     color: white;

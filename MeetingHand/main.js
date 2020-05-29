@@ -1,3 +1,5 @@
+
+
 var app = new Vue({
     el: '#app',
     data: {
@@ -16,6 +18,9 @@ var app = new Vue({
             this.members.push(this.member);
             this.member = {};
             this.step ++         
+      },
+      increaze: function(e) {
+        this.amount * 2
       },
 
       gottostep1: function(){
